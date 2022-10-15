@@ -31,5 +31,7 @@ class ChildrenDao @Autowired constructor(private val jdbcTemplate: JdbcTemplate)
         return child;
     }
 
+    fun deleteChildById(userId: String, childId: String) = jdbcTemplate.execute("DELETE FROM children WHERE user_id = '$userId' AND uuid = '$childId'")
+
     fun findByUserId(userId: String): List<ChildEntity> = jdbcTemplate.query("SELECT * FROM children WHERE user_id = '$userId'",rowMapper).toList();
 }

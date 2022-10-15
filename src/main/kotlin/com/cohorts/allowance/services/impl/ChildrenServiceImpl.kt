@@ -18,4 +18,8 @@ class ChildrenServiceImpl @Autowired constructor(private val childrenDao: Childr
         val newChildEntity = child.toEntity(userId);
        childrenDao.insertChildrenForUser(userId, newChildEntity);
     }
+
+    override fun deleteChild(userId: String, childId: String) {
+        childrenDao.deleteChildById(userId, childId);
+    }
 }
