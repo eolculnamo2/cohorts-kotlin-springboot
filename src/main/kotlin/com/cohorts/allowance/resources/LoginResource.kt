@@ -8,8 +8,8 @@ import javax.validation.Valid
 import javax.ws.rs.*
 import javax.ws.rs.core.MediaType
 
-@Path("/sessions")
-class SessionResource @Autowired constructor(private val loginService: LoginService) {
+@Path("/login")
+class LoginResource @Autowired constructor(private val loginService: LoginService) {
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)

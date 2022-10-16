@@ -10,7 +10,7 @@ class JerseyConfig : ResourceConfig() {
     init {
         register(PingResource::class.java)
         register(UsersResource::class.java)
-        register(SessionResource::class.java)
+        register(LoginResource::class.java)
         register(RegisterResource::class.java)
         register(ChildrenResource::class.java)
     }
